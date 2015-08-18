@@ -1,0 +1,14 @@
+{
+	"name" : "DIDACT",
+	"version" : "1.0",
+	"interface" : {
+		"speak" : {
+			"command" : {
+				"voice" : {
+					"linux" : "",
+					"osx" : "say {speak}"
+				}
+			}
+		}
+	}
+}

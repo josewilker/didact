@@ -1,0 +1,17 @@
+{
+	"voice" : "default",
+	"speak" : {
+		"AAAA1" : {
+			"lang" : {
+				"enUS" : "Hello",
+				"ptBR" : "Olá"
+			}
+		},
+		"AAAA2" : {
+			"lang" : {
+				"enUS" : "You are welcome!",
+				"ptBR" : "Seja bem vindo"
+			}
+		}
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"name" : "Didact",
+	"version" : "0.0.1",
+	"description" : "Didact is a tool for talk.",
+	"dependencies" : {
+		"async" : "exec"
+	},
+	"repository" : {
+		"type" : "git",
+		"url" : "https://github.com/josewilker/didact.git"
+	}
+}
