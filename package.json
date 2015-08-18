@@ -3,7 +3,8 @@
 	"version" : "0.0.1",
 	"description" : "Didact is a tool for talk.",
 	"dependencies" : {
-		"async" : "exec"
+		"exec" : "latest",
+		"mosca" : "latest"
 	},
 	"repository" : {
 		"type" : "git",
