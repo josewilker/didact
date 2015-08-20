@@ -1,7 +1,7 @@
 {
 	"name" : "DIDACT",
 	"version" : "0.0.1",
-	"language" : "enUS",
+	"language" : "ptBR",
 	"os" : "osx",
 	"socket" : {
 		"port" : 1882
