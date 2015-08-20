@@ -1,6 +1,6 @@
 #Didact
 
-**Didact** is a component using **NodeJS** for speak a voice **remotelly** using a PC. The speak code are maded by a sequence of six chars with combinations from A-Z_0-9.
+**Didact** is a component using **NodeJS** for speak a voice **remotelly** using a little computer, like a Raspberry Pi or Basic PC. The speak code are maded by a sequence of six chars with combinations from A-Z_0-9.
 
 ##Install
 You can install didact using basically NPM (Node Package Manager).
@@ -13,12 +13,12 @@ You can install didact using basically NPM (Node Package Manager).
 - mqtt
 
 ##Setup
-Setup the environment using your preferences.
+Setup the environment using your preferences to get the best experience.
 
-###Extend
+###Extending possibilities of speak
 You can setup your didact installation to do a lot of things using the voice code. So, you maybe want extend didact operations you can create a lot of interfaces. See a example below:
 
-**Execution** preferences:
+**Interfaces** preferences:
 
 ```
 {
@@ -34,8 +34,9 @@ You can setup your didact installation to do a lot of things using the voice cod
 	}
 }
 ```
+**Pay atention!** You can have **n** points of interfaces speaking the same voice. Basically, adding in the commands tree.
 
-**Basic** preferences:
+**Basic config** preferences:
 
 ```
 {
@@ -88,6 +89,40 @@ You can run the application using basic NodeJS command, that application still a
 ```
 node init.js
 ```
+
+##Example
+You can make a basic call using MQTT protocol to perform commands direct to your didact base with your definitions.
+
+See a example below:
+
+```
+var mqtt = require('mqtt');
+
+var settings = {
+    host : {host},
+    port : {port},
+    keepalive: 1000,
+    protocolId: 'MQIsdp',
+    protocolVersion: 3,
+    clientId: 'DIDACT'
+}
+
+if (didact.client == false) {
+    didact.client = mqtt.connect("mqtt://" + host,settings);
+}
+
+didact.client.publish("##AAAA1", "##AAAA1"); // predefined message
+didact.client.publish("#-Hello", "#-Hello"); // direct message
+
+```
+
+**Pay atention!** Look for **two types of call**, first with **##** call to a predefined message and second uses **#-** for sends a message direct from the buffer to didact base speak.
+
+##@TODO
+
+- Create more nodes of languages to the other countries.
+- Create a buffer to perform a voice when the speaker don't receive more sequenced data and have a good answer.
+- Apply bayesians filters to perform a prediction of best words to answer a question based on a code.
 
 --
 created by **José Wilker** <jose.wilker@smartapps.com.br>
