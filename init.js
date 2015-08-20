@@ -116,7 +116,6 @@ function setup() {
 
             console.log("talking by code...");
 
-            messageString = false;
             for(i=0; i < arrayMessageLengthA; i++) {
                 //;
                 didactArraySpeaks.push(async.apply(function(data, callback){
@@ -140,7 +139,7 @@ function setup() {
 
             console.log("talking direct...");
 
-            messageString = false;
+            messageString = "";
             for(i=0; i < arrayMessageLengthD; i++) {
                 messageString += ' "' + arrayMessageD[i] + '"';
             }
