@@ -91,7 +91,7 @@ node init.js
 ```
 
 ##Example
-You can make a basic call using MQTT protocol to perform commands direct to your didact base with your definitions.
+You can make a basic call using **MQTT** protocol to perform commands direct to your didact base with your definitions.
 
 See a example below:
 
